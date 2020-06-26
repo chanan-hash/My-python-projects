@@ -1,19 +1,10 @@
 from numpy import *
 
-arr1 = array([
-             [1,2,3],
-             [4,5,6]
-                ])
+m1 = matrix('1 2 3 ; 6 4 5 ; 1 6 7')
+m2 = matrix('1 2 3 ; 6 8 5 ; 2 6 7')
 
-arr2 = arr1.flatten()
+for i in range(len(m1)):
+    for j in range(len(m1)):
 
-print(arr1)
-print(arr1.dtype)
-print(arr1.ndim)
-print(arr1.shape)
-print(arr1.size)
-print(arr2)
-print(id(arr2))
-print(id(arr1))
-
-
+       m3 = m1[i] + m2[j]
+print(m3)
