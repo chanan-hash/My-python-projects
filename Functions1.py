@@ -7,8 +7,11 @@ def greet ():
 greet()
 
 
-def add(x,y):
+def add_sub(x,y):
     c = x+y
-    print(c)
+    d = x-y
+    return c,d
 
-add(5,4)
+result1, result2 = add_sub(5,4)
+
+
