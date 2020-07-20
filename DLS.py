@@ -1,3 +1,6 @@
+# משחק תמיד בלולאה אחת!! הם לא עוברים בכמה לולאות
+
+
 #Defend Shoot Load game
 
 # building the computer
@@ -71,8 +74,3 @@ while keep_playing:
     elif countLose == 3:
         print("GAME OVER ):")
         break
-
-
-
-
-
