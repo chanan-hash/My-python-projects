@@ -22,6 +22,7 @@ while keep_playing:
 
     print("The computer choos", cmove)
 
+
 # load your stack
     if pmoves == "load":
         countBp +=1
@@ -30,13 +31,24 @@ while keep_playing:
         countBc +=1
     print("bullets p: ", countBp, "bullets c: ", countBc)
 
-# if your stack is empty
-    if pmoves == "shoot" and countBp == 0:
-        print("No bullets in your stack")
-    elif cmove == "shoot" and countBc ==0:
-        print("No bullets in the stack")
+    while countBp == 0 and pmoves == "shoot":
+        pmoves = input("input agian, you are out of bullets. or defend or load?")
 
-while  keep_playing and countBc > 0 or countBp > 0:
+    # if your stack is empty
+        if pmoves == "load":
+            countBp +=1
+            print("bullets p: ", countBp, "bullets c: ", countBc)
+        elif cmove == "load":
+            countBc +=1
+            print("bullets p: ", countBp, "bullets c: ", countBc)
+
+        elif pmoves == "shoot" and countBp == 0:
+            print("No bullets in your stack")
+        elif cmove == "shoot" and countBc ==0:
+            print("No bullets in the stack")
+
+
+while keep_playing and countBc > 0 or countBp > 0:
     # the way to win or lose
 
     if pmoves == "shoot" and cmove == "load":
