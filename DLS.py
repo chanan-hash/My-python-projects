@@ -39,30 +39,30 @@ while keep_playing:
 while  keep_playing and countBc > 0 or countBp > 0:
     # the way to win or lose
 
-            if pmoves == "shoot" and cmove == "load":
-                countBp -=1
-                print("bullets p: ", countBp, "bullets c: ", countBc)
-                countWin +=1
-                print("You win!!")
+    if pmoves == "shoot" and cmove == "load":
+        countBp -=1
+        print("bullets p: ", countBp, "bullets c: ", countBc)
+        countWin +=1
+        print("You win!!")
 
 
-            elif pmoves == "load" and cmove == "shoot":
-                countBc -=1
-                print("bullets p: ", countBp, "bullets c: ", countBc)
-                countLose +=1
-                print("You lose ):")
+    elif pmoves == "load" and cmove == "shoot":
+        countBc -=1
+        print("bullets p: ", countBp, "bullets c: ", countBc)
+        countLose +=1
+        print("You lose ):")
 
         # defence and protect
-            if pmoves == "defend" and cmove == "shoot":
-                print("good you blocked him")
-                countBc -=1
-                print("bullets p: ", countBp, "bullets c: ", countBc)
+    if pmoves == "defend" and cmove == "shoot":
+        print("good you blocked him")
+        countBc -=1
+        print("bullets p: ", countBp, "bullets c: ", countBc)
 
 
-            elif pmoves == "shoot" and cmove == "defend":
-                print("Damm, lets try again!")
-                countBp -=1
-                print("bullets p: ", countBp, "bullets c: ", countBc)
+    elif pmoves == "shoot" and cmove == "defend":
+        print("Damm, lets try again!")
+        countBp -=1
+        print("bullets p: ", countBp, "bullets c: ", countBc)
 
     # how to win the whole game
             #if countWin == 3:
