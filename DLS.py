@@ -24,6 +24,7 @@ while keep_playing:
         cmove = random.choice(moves)
     else:
         cmove = random.choice(buletless_move)
+ # if you donwt have bullets or wrong word
     pmoves = input("what is your move: defend, load or shoot ?")
     while pmoves != "shoot" and pmoves != "load" and pmoves != "defend":
         pmoves = input("typo: what is your move: defend, load or shoot ?")
@@ -31,7 +32,6 @@ while keep_playing:
         pmoves = input("input agian, you are out of bullets. or defend or load?")
 
     print("The computer chose", cmove)
-
 
 # load your stack
     if pmoves == "load":
@@ -44,7 +44,6 @@ while keep_playing:
         countWin +=1
         print("You win!!")
 
-
     elif pmoves == "load" and cmove == "shoot":
         countBc -=1
         countLose +=1
@@ -54,7 +53,6 @@ while keep_playing:
     elif pmoves == "defend" and cmove == "shoot":
         print("good you blocked him")
         countBc -=1
-
 
     elif pmoves == "shoot" and cmove == "defend":
         print("Damm, lets try again!")
@@ -66,7 +64,6 @@ while keep_playing:
         countBc-=1
 
     print("bullets p: ", countBp, "bullets c: ", countBc)
-
 
     if countWin == 3:
         print("YOU WIN THE GAME!!")
