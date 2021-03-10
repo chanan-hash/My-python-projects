@@ -1,17 +1,22 @@
 import socket
+from builtins import print
 
 s = socket.socket()
-print('Socket Created')
 
-s.bind (('localhost',9999))
+print('Socket created')
+
+s.bind(('localhost',9999))
 
 s.listen(3)
 print('waiting for connections')
 
 while True:
     c, addr = s.accept()
-    print("Connected with ",addr )
+    name = c.recv(1024).decode()
 
-    c.send('Wellcome to Telusko! ')
+    print("Connected with ", addr,name)
+
+    c.send(bytes('Welcome To Telusko!','utf-8'))
 
     c.close()
+
